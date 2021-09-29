@@ -33,12 +33,16 @@ function addTask() {
 function addCategory() {
   const newCategory = getNewCategoryText();
   // continue the code here
+  categories.push(newCategory);
+  renderCategories(categories, CATEGORY_SELECTOR);
+  renderCategories(categories, CATEGORY_FILTER);
   alert(`New category was added: ${newCategory}`);
 }
 
 function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
   const done = getFilteredDone();
+
   // continue the code here
   // REMOVE ME: sample alert
   alert(`Category: ${selectedCategory} | done: ${done}`);

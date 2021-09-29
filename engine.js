@@ -27,3 +27,5 @@ function getNewTaskText() {
 function getNewCategoryText() {
   return document.getElementById("new-category").value;
 }
+
+//console.log(getNewCategoryText());
