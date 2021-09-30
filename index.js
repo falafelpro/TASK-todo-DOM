@@ -20,6 +20,9 @@ renderTasks(tasks, 'tasks-list');
 function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
+  tasks = tasks.map((task) =>
+    task.id === taskId ? { ...task, done: checked } : { ...task }
+  );
   console.log(`${checked ? '' : 'UN'}CHECKED TASK`, taskId);
 }
 
@@ -34,8 +37,13 @@ function addTask() {
     category: selectedCategory,
     done: false,
   };
-  renderTasks(tasks, 'tasks-list');
-  alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
+  if (selectedCategory === '--- Select ---') {
+    alert('Please select a category');
+  } else {
+    tasks.push(task);
+    renderTasks(tasks, 'tasks-list');
+    alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
+  }
 }
 
 function addCategory() {
