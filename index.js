@@ -27,14 +27,13 @@ function addTask() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_SELECTOR);
   const taskTitle = getNewTaskText();
   // continue the code here
-  const id = tasks.length();
+  const id = tasks.length;
   const task = {
-    id: 3,
+    id: id,
     title: taskTitle,
     category: selectedCategory,
     done: false,
   };
-  tasks.push(task);
   renderTasks(tasks, 'tasks-list');
   alert(`Category: ${selectedCategory} | Task: ${taskTitle}`);
 }
