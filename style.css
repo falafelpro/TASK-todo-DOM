@@ -1,6 +1,62 @@
-body {
-  font-family: "Roboto", sans-serif;
+:root {
+  --clr-dark-1: #242936;
+  --clr-green-1: #4a5859;
+  --clr-grey-1: #c6cdd5;
+  --clr-orange-1: #e94b30ff;
+  --clr-blue-1: #add7ff;
+
+  --clr-red-1: #cf6679;
+  --clr-red-2: #640000;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-blue-1);
+}
+
 .todo-item {
   display: flex;
+}
+
+.bg-dark {
+  background-color: var(--clr-dark-1);
+}
+
+.text-red {
+  color: var(--clr-red-1);
+}
+
+.btn-blue {
+  background-color: var(--clr-blue-1);
+  color: var(--clr-dark-1);
+}
+
+.trans-input {
+  background-color: transparent;
+  color: var(--clr-blue-1);
+}
+
+.card {
+  background-color: var(--clr-green-1);
+  color: var(--clr-grey-1);
+}
+
+.card-title {
+  background-color: rgb(54, 97, 87);
+}
+
+.hr-white {
+  color: var(--clr-blue-1);
+}
+
+label {
+  color: var(--clr-grey-1);
+}
+
+.red-checkbox {
+  color: var(--clr-red-1);
+}
+.form-check-input:checked {
+  background-color: var(--clr-red-1);
+  border-color: var(--clr-red-1);
 }

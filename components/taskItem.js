@@ -2,19 +2,19 @@ function tasksItemComponent(task) {
   // You are going to add your HTML design here.
   // Do the option design in HTML page, test it, and replace it if you need instead of this code.
   // For any variables, just use the interpolation operation ${} and pass the variable
-  const checked = task.done ? "checked" : "";
+  const checked = task.done ? 'checked' : '';
   return `
               <div class="todo-item card mt-1">
-              <div class="card-header">
+              <div class="card-header card-title">
               ${task.category}
               </div>
               <div class="card-body">
               <div class="row">
               <div class="col-1">
-              <input 
-              class="task-checkbox" 
+              <input
+              class="task-checkbox form-check-input"
               type="checkbox"
-              ${checked} 
+              ${checked}
               onchange="taskChecked(${task.id}, this.checked)"
             />
               </div>
@@ -26,7 +26,7 @@ function tasksItemComponent(task) {
 
               </div>
               </div>
-                
+
               </div>
       `;
 }

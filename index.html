@@ -25,19 +25,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="bg-dark">
     <div class="container mt-5">
-      <div class="row">
+      <div class="row bordered">
         <div class="col-6">
           <div>
-            <h1>Create your task</h1>
+            <h1 class="text-red">Create your task</h1>
             <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
           </div>
           <div class="row mt-2">
             <div class="col-12">
               <label for="categories-list">Choose a category</label>
               <select
-                class="form-control"
+                class="form-control trans-input"
                 id="categories-list"
                 title="All"
               ></select>
@@ -49,7 +49,7 @@
                 >Write your todo</label
               >
               <input
-                class="form-control"
+                class="form-control trans-input"
                 type="text"
                 name="new-task"
                 id="new-task"
@@ -58,16 +58,16 @@
             </div>
           </div>
           <div class="row mt-2" dir="rtl">
-            <div class="col-3">
-              <button class="btn btn-primary form-control">Add</button>
+            <div class="col-5">
+              <button class="btn btn-blue form-control">Add</button>
             </div>
           </div>
 
           <div class="row mt-5">
             <div class="col-12">
-              <h1>Create your category</h1>
+              <h1 class="text-red">Create your category</h1>
               <input
-                class="form-control"
+                class="form-control trans-input"
                 type="text"
                 name="new-category"
                 id="new-category"
@@ -76,12 +76,12 @@
             </div>
           </div>
           <div class="row mt-2" dir="rtl">
-            <div class="col-6">
+            <div class="col-5">
               <button
-                class="btn btn-primary form-control"
+                class="btn btn-blue form-control"
                 onclick="addCategory();"
               >
-                Create a category
+                Create Category
               </button>
             </div>
           </div>
@@ -90,31 +90,36 @@
           <!-- FILTERING DIV -->
           <div class="row">
             <div class="col-12">
-              <h1>filter by category</h1>
+              <h1 class="text-red">filter by category</h1>
               <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
               <div class="row g-1">
                 <div class="col-9">
                   <label for="categories-list-filter">Filter</label>
                   <select
-                    class="form-control"
+                    class="form-control trans-input"
                     id="categories-list-filter"
                     title="All"
                   ></select>
                 </div>
                 <div class="col-3 align-self-end">
-                  <button class="btn btn-primary form-control">Filter</button>
+                  <button class="btn btn-blue form-control">Filter</button>
                 </div>
               </div>
               <!-- DONE for filtering thing -->
               <div class="row mt-2">
                 <div class="col-12">
-                  <input type="checkbox" name="done" id="done" />
+                  <input
+                    type="checkbox"
+                    name="done"
+                    id="done"
+                    class="form-check-input red-checkbox"
+                  />
                   <label for="done">Filter by done</label>
                 </div>
               </div>
             </div>
           </div>
-          <hr />
+          <hr class="hr-white" />
 
           <!-- KEEP THE DIV EMPTY. IT WILL BE FILLED BY JS  -->
           <div id="tasks-list"></div>
