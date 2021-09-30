@@ -35,30 +35,33 @@
           </div>
           <div class="row mt-2">
             <div class="col-12">
-              <label for="categories-list">Choose a category</label>
-              <select
-                class="form-control trans-input"
-                id="categories-list"
-                title="All"
-              ></select>
+              <div class="textOnInput">
+                <label for="categories-list">Choose a category</label>
+                <select
+                  class="form-control trans-input"
+                  id="categories-list"
+                  title="All"
+                ></select>
+              </div>
             </div>
           </div>
-          <div class="row mt-2">
+          <div class="row mt-4">
             <div class="col-12">
-              <label class="lable-control" for="new-task"
-                >Write your todo</label
-              >
-              <input
-                class="form-control trans-input"
-                type="text"
-                name="new-task"
-                id="new-task"
-                placeholder="* Add a new task"
-              />
+              <div class="textOnInput">
+                <label class="lable-control" for="new-task"
+                  >Write your todo</label
+                >
+                <input
+                  class="form-control trans-input"
+                  type="text"
+                  name="new-task"
+                  id="new-task"
+                />
+              </div>
             </div>
           </div>
           <div class="row mt-2" dir="rtl">
-            <div class="col-5">
+            <div class="col-3">
               <button class="btn btn-blue form-control" onclick="addTask();">
                 Add
               </button>
@@ -78,7 +81,7 @@
             </div>
           </div>
           <div class="row mt-2" dir="rtl">
-            <div class="col-5">
+            <div class="col-4">
               <button
                 class="btn btn-blue form-control"
                 onclick="addCategory();"
@@ -95,16 +98,23 @@
               <h1 class="text-red">filter by category</h1>
               <!-- KEEP THE SELECT EMPTY. IT WILL BE FILLED BY JS  -->
               <div class="row g-1">
-                <div class="col-9">
-                  <label for="categories-list-filter">Filter</label>
-                  <select
-                    class="form-control trans-input"
-                    id="categories-list-filter"
-                    title="All"
-                  ></select>
+                <div class="col-10">
+                  <div class="textOnInput">
+                    <label for="categories-list-filter">Filter</label>
+                    <select
+                      class="form-control trans-input"
+                      id="categories-list-filter"
+                      title="All"
+                    ></select>
+                  </div>
                 </div>
-                <div class="col-3 align-self-end">
-                  <button class="btn btn-blue form-control">Filter</button>
+                <div class="col-2 align-self-end">
+                  <button
+                    class="btn btn-blue mb-0 pt-2 form-control"
+                    onclick="filterTasks()"
+                  >
+                    Filter
+                  </button>
                 </div>
               </div>
               <!-- DONE for filtering thing -->

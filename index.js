@@ -11,7 +11,7 @@ tasks = [
   { id: 1, title: 'Toy Story 4', category: 'Movies', done: false },
 ];
 
-categories = ['--- Select ---', 'Movies', 'Groceries'];
+categories = ['', 'Movies', 'Groceries'];
 // SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
@@ -57,9 +57,18 @@ function addCategory() {
 
 function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
-  const done = getFilteredDone();
+  const done = getFilteredDone(); 
+
+  list = tasks.filter((task) => {
+    if (done === true)
+      return task.category === selectedCategory && task.done === done;
+    else
+      return task.category === selectedCategory
+  })
+    
+  renderTasks(list, 'tasks-list');
 
   // continue the code here
   // REMOVE ME: sample alert
-  alert(`Category: ${selectedCategory} | done: ${done}`);
+ 
 }

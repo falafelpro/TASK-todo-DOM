@@ -6,11 +6,15 @@
   --clr-blue-1: #add7ff;
 
   --clr-red-1: #cf6679;
-  --clr-red-2: #640000;
+  --clr-red-2: rgb(55, 48, 54);
+}
+h1 {
+  font-size: x-large;
+  margin-bottom: 10px;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--clr-blue-1);
 }
 
@@ -29,6 +33,14 @@ body {
 .btn-blue {
   background-color: var(--clr-blue-1);
   color: var(--clr-dark-1);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
 }
 
 .trans-input {
@@ -37,12 +49,12 @@ body {
 }
 
 .card {
-  background-color: var(--clr-green-1);
+  background-color: rgb(41, 41, 41);
   color: var(--clr-grey-1);
 }
 
 .card-title {
-  background-color: rgb(54, 97, 87);
+  background-color: var(--clr-red-2);
 }
 
 .hr-white {
@@ -50,7 +62,7 @@ body {
 }
 
 label {
-  color: var(--clr-grey-1);
+  color: rgb(101, 163, 149);
 }
 
 .red-checkbox {
@@ -59,4 +71,52 @@ label {
 .form-check-input:checked {
   background-color: var(--clr-red-1);
   border-color: var(--clr-red-1);
+}
+
+.textOnInput {
+  position: relative;
+}
+.textOnInput label {
+  background-color: var(--clr-dark-1);
+  position: absolute;
+  top: -15px;
+  left: 23px;
+  padding: 2px;
+  z-index: 1;
+}
+.textOnInput label:after {
+  content: " ";
+  background-color: transparent;
+  width: 100%;
+  height: 13px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+label {
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.form-control {
+  box-shadow: none !important;
+}
+select {
+  background-image: linear-gradient(
+      45deg,
+      transparent 50%,
+      var(--clr-blue-1) 60%
+    ),
+    linear-gradient(135deg, var(--clr-blue-1) 40%, transparent 50%) !important;
+  background-position: calc(100% - 30px) 14px, calc(100% - 20px) 14px, 100% 0;
+  background-size: 10px 10px, 10px 10px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.trans-input:focus {
+  background-color: transparent;
+  color: var(--clr-blue-1);
 }
